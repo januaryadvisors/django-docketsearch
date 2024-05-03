@@ -85,6 +85,23 @@ class UJSSearch:
         async with self.sess.get(url) as response:
             print('UJSSearch FETCH')
             print(response)
+            print(url)
+            print("cookies")
+            print(response.cookies)
+            print("headers")
+            print(response.headers)
+            print("links")
+            print(response.links)
+            print("history")
+            print(response.history)
+            print("raise for status")
+            print(response.raise_for_status())
+            print("status_code")
+            print(response.status_code)
+            print("reason")
+            print(response.reason)
+            if response.status_code != 200:
+                print(response.text)
             if response.status == 200:
                 return (await response.text(), [])
             else:
@@ -104,6 +121,23 @@ class UJSSearch:
         async with self.sess.post(url, data=data, headers=headers_to_send) as response:
             print('UJSSearch POST')
             print(response)
+            print(url)
+            print("cookies")
+            print(response.cookies)
+            print("headers")
+            print(response.headers)
+            print("links")
+            print(response.links)
+            print("history")
+            print(response.history)
+            print("raise for status")
+            print(response.raise_for_status())
+            print("status_code")
+            print(response.status_code)
+            print("reason")
+            print(response.reason)
+            if response.status_code != 200:
+                print(response.text)
             if response.status == 200:
                 return (await response.text(), [])
             else:
