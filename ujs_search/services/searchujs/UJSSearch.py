@@ -97,10 +97,10 @@ class UJSSearch:
             print("raise for status")
             print(response.raise_for_status())
             print("status_code")
-            print(response.status_code)
+            print(response.status)
             print("reason")
             print(response.reason)
-            if response.status_code != 200:
+            if response.status != 200:
                 print(response.text)
             if response.status == 200:
                 return (await response.text(), [])
@@ -133,10 +133,10 @@ class UJSSearch:
             print("raise for status")
             print(response.raise_for_status())
             print("status_code")
-            print(response.status_code)
+            print(response.status)
             print("reason")
             print(response.reason)
-            if response.status_code != 200:
+            if response.status != 200:
                 print(response.text)
             if response.status == 200:
                 return (await response.text(), [])
